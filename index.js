@@ -1,6 +1,10 @@
+/* eslint-disable @stylistic/js/semi */
+/* eslint-disable no-unused-vars */
+/* eslint-disable @stylistic/js/quotes */
+/* eslint-disable @stylistic/js/indent */
 const express = require('express')
 const morgan = require('morgan')
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 const cors = require('cors')
 const app = express()
 
@@ -18,7 +22,7 @@ morgan.token('body', (req) => {
     if (req.method === 'POST') {
         return JSON.stringify(req.body)
     }
-    return '';
+    return ''
 })
 
 const logFormat = ':method :url :status :res[content-length] - :response-time ms :body'
